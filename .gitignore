@@ -1,0 +1,4 @@
+/node_modules/*
+/mochafiles/*
+mapping.json
+required.json
