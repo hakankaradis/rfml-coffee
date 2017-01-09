@@ -12,8 +12,9 @@ parseTestSteps = (body, index = 1) ->
 
       # get descritions and assertions
       [description, asserts...] = step.split('\n')
-      step = { description, asserts: asserts[0].trim().split('? ') }
-      steps.push step
+      if description.length
+        step = { description, asserts: asserts[0].trim().split('? ') }
+        steps.push step
 
   steps
 
